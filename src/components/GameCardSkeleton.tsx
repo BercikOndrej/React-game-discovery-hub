@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const GameCardSkeleton = () => {
   return (
-    <Card className="max-w-[600px] w-[100%] mx-auto rounded-t-xl">
+    <Card className="mx-auto rounded-t-xl w-full">
       <Skeleton className="w-full min-h-[200px] rounded-b-none rounded-t-lg" />
       <CardHeader className="gap-2">
         <div className="flex flex-row justify-between">

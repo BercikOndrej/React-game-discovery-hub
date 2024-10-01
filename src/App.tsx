@@ -22,7 +22,11 @@ function App() {
 
         <div className="hidden row-span-1 col-span-1 lg:inline">Aside</div>
 
-        <div className="col-span-1 row-span-1 mx-auto p-4 flex flex-col gap-4">
+        <div className="col-span-1 row-span-1 mx-auto p-4 flex flex-col gap-4 w-full">
+          <div className="flex flex-row gap-4">
+            <div className="w-50"> test</div>
+            <div className="w-50"> test</div>
+          </div>
           <GameGrid gameQuery={gameQuery} />
         </div>
       </div>

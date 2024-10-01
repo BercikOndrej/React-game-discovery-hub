@@ -10,7 +10,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card className="group max-w-[600px] mx-auto rounded-t-xl">
+    <Card className="group mx-auto rounded-t-xl">
       <img
         className="rounded-t-lg"
         src={getCroppedImage(game.background_image)}

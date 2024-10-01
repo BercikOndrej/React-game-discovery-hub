@@ -1,4 +1,4 @@
-import logo from "../assets/logo.webp";
+import logo from "@/assets/logo.webp";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const NavBar = () => {

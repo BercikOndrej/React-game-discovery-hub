@@ -1,4 +1,4 @@
-import placeholder from "../assets/no-image-placeholder-6f3882e0.webp";
+import placeholder from "../assets/no-image-placeholder.webp";
 
 export default function getCroppedImage(url: string) {
   if (url === null) return placeholder;

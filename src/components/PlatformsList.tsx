@@ -11,7 +11,7 @@ const PlatformsIconList = ({ platforms }: Props) => {
       {platforms.map((platform) => (
         <div
           key={platform.id}
-          className=" text-black dark:text-white group-hover:text-white group-hover:dark:text-gray-900"
+          className=" text-gray-700 dark:text-gray-50 group-hover:text-gray-100 group-hover:dark:text-gray-900"
         >
           <DynamicalIcon platformSlug={platform.slug} />
         </div>

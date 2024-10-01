@@ -10,7 +10,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card className="group hover:bg-gray-900 dark:hover:bg-white max-w-[600px] mx-auto rounded-t-xl">
+    <Card className="group max-w-[600px] mx-auto rounded-t-xl">
       <img
         className="rounded-t-lg"
         src={getCroppedImage(game.background_image)}
@@ -29,7 +29,7 @@ const GameCard = ({ game }: Props) => {
             <CriticScoreBadge score={game.metacritic} />
           )}
         </div>
-        <CardTitle className="text-2xl group-hover:text-white group-hover:dark:text-gray-900">
+        <CardTitle className="text-2xl group-hover:text-gray-50 group-hover:dark:text-gray-900">
           {game.name}
         </CardTitle>
       </CardHeader>

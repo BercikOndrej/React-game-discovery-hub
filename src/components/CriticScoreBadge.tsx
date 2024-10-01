@@ -5,19 +5,21 @@ interface Props {
 }
 const CriticScoreBadge = ({ score }: Props) => {
   const color = score > 75 ? "green" : score > 50 ? "yellow" : "gray";
-  let style = "hover:dark:text-black hover:text-white dark:opacity-70 ";
+  let style = "group-hover:dark:text-black hover:text-green dark:opacity-70 ";
 
   switch (color) {
     case "green": {
-      style += "bg-green-100 text-green-700";
+      style +=
+        "bg-green-100 text-green-700 dark:bg-green-100 dark:text-green-700";
       break;
     }
     case "yellow": {
-      style += "bg-yellow-100 text-yellow-700";
+      style +=
+        "bg-yellow-100 text-yellow-700 dark:bg-yellow-100 dark:text-yellow-700";
       break;
     }
     case "gray": {
-      style += "bg-gray-100 text-gray-700";
+      style += "bg-gray-100 text-gray-700 dark:bg-gray-100 dark:text-gray-700";
       break;
     }
   }

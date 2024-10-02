@@ -11,6 +11,7 @@ export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
   ordering: string;
+  searchText: string;
 }
 
 function App() {
@@ -20,17 +21,21 @@ function App() {
     <>
       <div className="grid grid-cols-1 grid-rows-[5em,1fr] lg:grid-cols-[200px,1fr]">
         <div className="row-span-1 col-span-2">
-          <NavBar />
+          <NavBar
+            onSearch={(searchText) =>
+              setGameQuery({ ...gameQuery, searchText })
+            }
+          />
         </div>
 
-        <div className="hidden row-span-1 col-span-1 lg:inline">
+        <aside className="hidden row-span-1 col-span-1 lg:inline">
           <GenresList
             activeGenre={gameQuery.genre}
             onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
           />
-        </div>
+        </aside>
 
-        <div className="col-span-1 row-span-1 mx-auto p-4 flex flex-col gap-4 w-full">
+        <main className="col-span-1 row-span-1 mx-auto p-4 flex flex-col gap-4 w-full">
           <div className="flex flex-row gap-4">
             <PlatformSelector
               onSelectPlatform={(platform) =>
@@ -44,7 +49,7 @@ function App() {
             />
           </div>
           <GameGrid gameQuery={gameQuery} />
-        </div>
+        </main>
       </div>
     </>
   );

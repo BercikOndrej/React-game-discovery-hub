@@ -60,4 +60,4 @@
 
 - I made app deployment by `Vercel` and `GitHub` -> [GitHub repository](https://github.com/BercikOndrej/React-game-hub)
 - It is a cloud platform for building and deploing application
-- This is an address, where my app running `https://game-8se843rkv-bercikondrejs-projects.vercel.app` -> **it is available only by vercel account authenticate**
+- An address, where my app is running is random generated -> **it is available only by vercel account authenticate and I get it on my vercel account**

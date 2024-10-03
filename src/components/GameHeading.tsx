@@ -4,7 +4,7 @@ interface Props {
   gameQuery: GameQuery;
 }
 
-const GameHeadsing = ({ gameQuery }: Props) => {
+const GameHeading = ({ gameQuery }: Props) => {
   return (
     <h1 className="text-6xl font-bold">
       {`${gameQuery.platform?.name ?? ""} ${
@@ -14,4 +14,4 @@ const GameHeadsing = ({ gameQuery }: Props) => {
   );
 };
 
-export default GameHeadsing;
+export default GameHeading;

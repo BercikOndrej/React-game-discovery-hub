@@ -19,23 +19,26 @@ const GenresList = ({ activeGenre, onSelectGenre: onSelectGenre }: Props) => {
       {error && <p className="text-4xl">{error}</p>}
       {isLoading && <Spinner size="medium" />}
 
-      <ul className="flex flex-col gap-1 pt-4 ps-4">
-        {data.map((genre) => (
-          <li
-            key={genre.id}
-            onClick={() => onSelectGenre(genre)}
-            className={genre.id === activeGenre?.id ? activeStyle : style}
-          >
-            <div className="group flex flex-row gap-4 items-center">
-              <img
-                src={getCroppedImage(genre.image_background)}
-                className="w-[32px] h-[32px] rounded-lg"
-              />
-              <p className="text-xl flex-grow">{genre.name}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className="ps-4 gap-4 flex flex-col pt-4">
+        <h2 className="text-3xl ps-2">Genres</h2>
+        <ul className="flex flex-col gap-1">
+          {data.map((genre) => (
+            <li
+              key={genre.id}
+              onClick={() => onSelectGenre(genre)}
+              className={genre.id === activeGenre?.id ? activeStyle : style}
+            >
+              <div className="group flex flex-row gap-4 items-center">
+                <img
+                  src={getCroppedImage(genre.image_background)}
+                  className="w-10 h-10 rounded-lg object-cover"
+                />
+                <p className="text-xl flex-grow">{genre.name}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };

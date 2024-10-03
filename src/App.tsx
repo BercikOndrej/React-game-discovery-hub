@@ -6,7 +6,7 @@ import { useState } from "react";
 import PlatformSelector from "@/components/PlatformSelector";
 import SortSelector from "@/components/SortSelector";
 import GenresList from "@/components/GenresList";
-import GameHeadsing from "./components/GameHeadsing";
+import GameHeading from "@/components/GameHeading";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -37,7 +37,7 @@ function App() {
         </aside>
 
         <main className="col-span-1 row-span-1 mx-auto p-4 flex flex-col gap-4 w-full">
-          <GameHeadsing gameQuery={gameQuery} />
+          <GameHeading gameQuery={gameQuery} />
           <div className="flex flex-row gap-4">
             <PlatformSelector
               onSelectPlatform={(platform) =>

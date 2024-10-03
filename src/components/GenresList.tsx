@@ -1,6 +1,7 @@
 import useGenres, { Genre } from "@/hooks/useGenres";
 import { Spinner } from "@/components/ui/spinner";
 import getCroppedImage from "@/services/image-url";
+import ErrorAlert from "./ErrorAlert";
 
 interface Props {
   activeGenre: Genre | null;
@@ -17,7 +18,7 @@ const GenresList = ({ activeGenre, onSelectGenre: onSelectGenre }: Props) => {
 
   return (
     <>
-      {error && <p className="text-4xl">{error}</p>}
+      {error && <ErrorAlert>{error}</ErrorAlert>}
       {isLoading && <Spinner size="medium" />}
 
       <div className="ps-4 gap-4 flex flex-col pt-4">

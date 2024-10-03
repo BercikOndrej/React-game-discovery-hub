@@ -9,7 +9,7 @@ export interface ApiResponse<T> {
 export default axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "449958c462ce49bbb3bbcf8099de2c65",
+    key: import.meta.env.VITE_REACT_APP_RAWG_API_KEY,
   },
 });
 

@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# Game Hub Discovery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This application is a final project for my comprehensive course
+- It is a React application write in `TypeScript`
 
-Currently, two official plugins are available:
+## App Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Showing game data like name, platforms for these games, rating, critic socre and so on
+- Filtering games by Genres
+- Filtering games by Platform
+- Searching in games
+- Sorting games by sever elements
+- Dark and Light mode
+- Simple animations
 
-## Expanding the ESLint configuration
+## Server
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- `Vite` was used as deveplopment server for run my app
+- Data were obtained by `API` provided by [rawg.io](https://rawg.io) -> here I created an account and I got a `API key` for authorization
+- My app showing data about games, platforms and games genres to the customer
 
-- Configure the top-level `parserOptions` property like this:
+## Used Frameworks
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- `Tailwind CSS` for styling
+- `Vite` for development server and React template
+- `Shadcn UI` for React components
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Used `npm` Packages
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- `react-icons` for many icons
+- `axios` axios for easy http comunication
+- `dotenv` for managing enviroment variables
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Practised Terms
+
+- Connection to the backend
+- Fetching data from server and canceling a fetch request
+- Creatin React Components
+- Learning `Tailwind CSS` and `Shadcn UI` in detail
+- Rendering data dynamicaly
+- Handling events for user response
+- Detailed familiarization with `useState`, `useEffect` and `useRef hooks`
+- Sharing state between components
+- Inspecting result by `Chrome React Developer Tools`
+- Correct display of icons and images
+- Responzive design
+- Separation of Concerns
+- Showing loading elements like skeletons and loading spinner
+- Creating a generic classes and custom fetching hook for server data managing
+- Store some data as static data
+- Build application and preper app to production

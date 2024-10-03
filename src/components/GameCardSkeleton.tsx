@@ -12,6 +12,7 @@ const GameCardSkeleton = () => {
         </div>
         <Skeleton className="w-full h-2" />
         <Skeleton className="w-1/2 h-2" />
+        <Skeleton className="w-8 h-6" />
       </CardHeader>
     </Card>
   );

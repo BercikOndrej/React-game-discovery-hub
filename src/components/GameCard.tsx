@@ -1,8 +1,9 @@
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Game } from "@/hooks/useGames";
 import getCroppedImage from "@/services/image-url";
 import PlatformsIconList from "@/components/PlatformsList";
 import CriticScoreBadge from "@/components/CriticScoreBadge";
+import RatingEmoji from "./RatingEmoji";
 
 interface Props {
   game: Game;
@@ -18,7 +19,7 @@ const GameCard = ({ game }: Props) => {
         src={getCroppedImage(game.background_image, theme)}
         alt="Game image"
       />
-      <CardHeader>
+      <CardHeader className="pb-0">
         <div className="flex flex-row justify-between">
           <PlatformsIconList
             platforms={
@@ -35,6 +36,9 @@ const GameCard = ({ game }: Props) => {
           {game.name}
         </CardTitle>
       </CardHeader>
+      <CardFooter className="mt-2">
+        <RatingEmoji rating={game.rating_top} />
+      </CardFooter>
     </Card>
   );
 };

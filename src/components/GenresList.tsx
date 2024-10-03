@@ -8,6 +8,7 @@ interface Props {
 }
 const GenresList = ({ activeGenre, onSelectGenre: onSelectGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
+
   const style =
     "duration-500 transform ease-linear group hover:cursor-pointer p-2 rounded-lg hover:font-bold hover:bg-gray-700 hover:text-gray-50 hover:dark:bg-gray-50 hover:dark:text-gray-700 ";
   const activeStyle =

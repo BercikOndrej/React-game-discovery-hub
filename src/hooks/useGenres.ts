@@ -1,6 +1,4 @@
-import useData from "./useData";
-
-const ENDPOINT = "/genres";
+import genres from "@/data/genres";
 
 export interface Genre {
   id: number;
@@ -10,5 +8,5 @@ export interface Genre {
   games_count: number;
 }
 
-const useGenres = () => useData<Genre>(ENDPOINT);
+const useGenres = () => ({ data: genres, isLoading: false, error: null });
 export default useGenres;

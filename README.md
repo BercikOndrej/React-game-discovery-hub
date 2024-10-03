@@ -1,11 +1,11 @@
-# Game Hub Discovery App
+# Game Hub React App
 
-- This application is a final project for my comprehensive course
-- It is a React application write in `TypeScript`
+- A `React` application wrote in `TypeScript`
+- This application is a final project for practised my `React` and `TypeScript` skills
 
 ## App Features
 
-- Showing game data like name, platforms for these games, rating, critic socre and so on
+- Showing game data like name, platforms for these games, rating, critic score and so on
 - Filtering games by Genres
 - Filtering games by Platform
 - Searching in games
@@ -35,17 +35,29 @@
 
 - Connection to the backend
 - Fetching data from server and canceling a fetch request
-- Creatin React Components
+- Creating React Components
 - Learning `Tailwind CSS` and `Shadcn UI` in detail
-- Rendering data dynamicaly
-- Handling events for user response
+- Rendering data dynamically
+- Handling events for user responses
 - Detailed familiarization with `useState`, `useEffect` and `useRef hooks`
 - Sharing state between components
 - Inspecting result by `Chrome React Developer Tools`
 - Correct display of icons and images
-- Responzive design
+- Implementation responzive design
 - Separation of Concerns
 - Showing loading elements like skeletons and loading spinner
 - Creating a generic classes and custom fetching hook for server data managing
-- Store some data as static data
-- Build application and preper app to production
+- Store and show some data as a static data
+- Build application and prepare app to production
+
+## Useful Commads
+
+- `npm run dev` for running an app by development server
+- `npm run build` for building an app
+- `vercel` for app deployment
+
+## App Deployment
+
+- I made app deployment by `Vercel` and `GitHub` -> [GitHub repository](https://github.com/BercikOndrej/React-game-hub)
+- It is a cloud platform for building and deploing application
+- This is an address, where my app running `https://game-8se843rkv-bercikondrejs-projects.vercel.app` -> **it is available only by vercel account authenticate**

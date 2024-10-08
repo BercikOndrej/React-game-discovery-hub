@@ -1,8 +1,8 @@
-import useGames from "@/hooks/useGames";
-import GameCard from "@/components/GameCard";
-import GameCardSkeleton from "@/components/GameCardSkeleton";
-import { GameQuery } from "@/App";
-import ErrorAlert from "./ErrorAlert";
+import useGames from '@/hooks/useGames';
+import GameCard from '@/components/GameCard';
+import GameCardSkeleton from '@/components/GameCardSkeleton';
+import { GameQuery } from '@/App';
+import ErrorAlert from './ErrorAlert';
 
 interface Props {
   gameQuery: GameQuery;
@@ -13,11 +13,11 @@ const GameGrid = ({ gameQuery }: Props) => {
   const keys = Array.from({ length: 16 }, (_, num) => num + 1);
   return (
     <>
-      {error && <ErrorAlert>{error}</ErrorAlert>}
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {error && <ErrorAlert>{error.message}</ErrorAlert>}
+      <div className='grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         {isLoading &&
           keys.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
-        {data.map((game) => (
+        {data?.results.map((game) => (
           <GameCard key={game.id} game={game} />
         ))}
       </div>

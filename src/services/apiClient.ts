@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 export interface ApiResponse<T> {
   count: number;
@@ -15,9 +15,9 @@ const axiosInstant = axios.create({
 export default class APIClient<T> {
   constructor(private _endpoint: string) {}
 
-  getAll = () => {
+  getAll = (config?: AxiosRequestConfig) => {
     return axiosInstant
-      .get<ApiResponse<T>>(this._endpoint)
+      .get<ApiResponse<T>>(this._endpoint, config)
       .then((res) => res.data);
   };
 }

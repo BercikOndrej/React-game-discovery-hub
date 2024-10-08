@@ -1,9 +1,9 @@
 import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Game } from '@/hooks/useGames';
 import getCroppedImage from '@/services/imageUrl';
 import PlatformsIconList from '@/components/PlatformsList';
 import CriticScoreBadge from '@/components/CriticScoreBadge';
 import RatingEmoji from './RatingEmoji';
+import { Game } from '@/services/gamesService';
 
 interface Props {
   game: Game;

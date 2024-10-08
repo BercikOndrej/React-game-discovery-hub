@@ -1,9 +1,9 @@
-import { Genre } from "./useGenres";
-import useData from "./useData";
-import { Platform } from "./usePlatforms";
-import { GameQuery } from "@/App";
+import { Genre } from '@/services/genresService';
+import useData from './useData';
+import { GameQuery } from '@/App';
+import { Platform } from '@/services/platformsService';
 
-const ENPOINT = "/games";
+const ENPOINT = '/games';
 
 export interface Game {
   id: number;

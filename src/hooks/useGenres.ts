@@ -1,12 +1,13 @@
-import { ApiResponse } from '@/services/apiClient';
-import genresService, { Genre } from '@/services/genresService';
+import genresService from '@/services/genresService';
 import { useQuery } from '@tanstack/react-query';
+import genres from '@/data/genres';
 
 const useGenres = () =>
-  useQuery<ApiResponse<Genre>, Error>({
+  useQuery({
     queryKey: ['genres'],
     queryFn: genresService.getAll,
     placeholderData: (prev) => prev,
     staleTime: 24 * 60 * 60 * 1000, // 24 hours
+    initialData: { count: genres.length, results: genres },
   });
 export default useGenres;

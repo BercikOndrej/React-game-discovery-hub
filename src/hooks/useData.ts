@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { CanceledError } from "../services/api-client";
-import apiService from "../services/api-service";
-import { AxiosRequestConfig } from "../services/api-client";
+import { useEffect, useState } from 'react';
+import { CanceledError } from '../services/apiClient';
+import apiService from '../services/api-service';
+import { AxiosRequestConfig } from '../services/apiClient';
 
 const useData = <T>(
   endpoint: string,
@@ -10,7 +10,7 @@ const useData = <T>(
 ) => {
   const [data, setData] = useState<T[]>([]);
   const [isLoading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   useEffect(
     () => {

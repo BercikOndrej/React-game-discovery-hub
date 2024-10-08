@@ -20,7 +20,10 @@ function App() {
 
   return (
     <>
-      <div className='grid grid-cols-1 grid-rows-[5em,1fr] lg:grid-cols-[200px,1fr]'>
+      <div
+        id='scroll'
+        className='grid grid-cols-1 grid-rows-[5em,1fr] lg:grid-cols-[200px,1fr]'
+      >
         <div className='row-span-1 col-span-2'>
           <NavBar
             onSearch={(searchText) =>

@@ -1,4 +1,4 @@
-import usePlatforms, { Platform } from "@/hooks/usePlatforms";
+import { Platform } from '@/services/platformsService';
 import {
   Select,
   SelectContent,
@@ -7,8 +7,9 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
-import { Spinner } from "@/components/ui/spinner";
+} from './ui/select';
+import { Spinner } from '@/components/ui/spinner';
+import usePlatforms from '@/hooks/usePlatforms';
 
 interface Props {
   onSelectPlatform: (platformSlug: Platform) => void;
@@ -23,18 +24,18 @@ const PlatformSelector = ({ onSelectPlatform }: Props) => {
     <Select
       onValueChange={(platformSlug) =>
         onSelectPlatform(
-          data.find((platform) => platform.slug === platformSlug)!!
+          data?.results.find((platform) => platform.slug === platformSlug)!!
         )
       }
     >
-      <SelectTrigger className="w-40">
-        <SelectValue placeholder="Select a platform" />
+      <SelectTrigger className='w-40'>
+        <SelectValue placeholder='Select a platform' />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Platforms</SelectLabel>
           {isLoading && <Spinner />}
-          {data.map((platform) => (
+          {data?.results.map((platform) => (
             <SelectItem key={platform.id} value={platform.slug}>
               {platform.name}
             </SelectItem>

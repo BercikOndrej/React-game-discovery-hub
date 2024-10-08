@@ -1,5 +1,5 @@
-import apiClient from './apiClient';
-import { AxiosRequestConfig } from './apiClient';
+import apiClient from './api-client';
+import { AxiosRequestConfig } from './api-client';
 
 interface ApiResponse<T> {
   count: number;

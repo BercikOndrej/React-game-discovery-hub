@@ -1,7 +1,8 @@
-import useGenres, { Genre } from '@/hooks/useGenres';
 import { Spinner } from '@/components/ui/spinner';
 import getCroppedImage from '@/services/imageUrl';
 import ErrorAlert from './ErrorAlert';
+import { Genre } from '@/services/genresService';
+import useGenres from '@/hooks/useGenres';
 
 interface Props {
   activeGenre: Genre | null;
@@ -18,13 +19,13 @@ const GenresList = ({ activeGenre, onSelectGenre: onSelectGenre }: Props) => {
 
   return (
     <>
-      {error && <ErrorAlert>{error}</ErrorAlert>}
+      {error && <ErrorAlert>{error.message}</ErrorAlert>}
       {isLoading && <Spinner size='medium' />}
 
       <div className='ps-4 gap-4 flex flex-col pt-4'>
         <h2 className='text-3xl ps-2'>Genres</h2>
         <ul className='flex flex-col gap-1'>
-          {data.map((genre) => (
+          {data?.results.map((genre) => (
             <li
               key={genre.id}
               onClick={() => onSelectGenre(genre)}

@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
         <App />
-        <ReactQueryDevtools />
+        <ReactQueryDevtools position='top' initialIsOpen={true} />
       </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>

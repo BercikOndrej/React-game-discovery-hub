@@ -5,12 +5,10 @@ import PlatformSelector from '@/components/PlatformSelector';
 import SortSelector from '@/components/SortSelector';
 import GenresList from '@/components/GenresList';
 import GameHeading from '@/components/GameHeading';
-import { Genre } from './services/genresService';
-import { Platform } from './services/platformsService';
 
 export interface GameQuery {
-  genre: Genre | null;
-  platform: Platform | null;
+  genreId?: number;
+  platformId?: number;
   ordering: string;
   searchText: string;
 }
@@ -34,8 +32,10 @@ function App() {
 
         <aside className='hidden row-span-1 col-span-1 lg:inline'>
           <GenresList
-            activeGenre={gameQuery.genre}
-            onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
+            activeGenreId={gameQuery.genreId}
+            onSelectGenre={(genre) =>
+              setGameQuery({ ...gameQuery, genreId: genre.id })
+            }
           />
         </aside>
 
@@ -44,7 +44,7 @@ function App() {
           <div className='flex flex-row gap-4'>
             <PlatformSelector
               onSelectPlatform={(platform) =>
-                setGameQuery({ ...gameQuery, platform })
+                setGameQuery({ ...gameQuery, platformId: platform.id })
               }
             />
             <SortSelector

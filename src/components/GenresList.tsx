@@ -5,10 +5,10 @@ import { Genre } from '@/services/genresService';
 import useGenres from '@/hooks/useGenres';
 
 interface Props {
-  activeGenre: Genre | null;
+  activeGenreId?: number;
   onSelectGenre: (genre: Genre) => void;
 }
-const GenresList = ({ activeGenre, onSelectGenre: onSelectGenre }: Props) => {
+const GenresList = ({ activeGenreId, onSelectGenre: onSelectGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
 
   const style =
@@ -29,7 +29,7 @@ const GenresList = ({ activeGenre, onSelectGenre: onSelectGenre }: Props) => {
             <li
               key={genre.id}
               onClick={() => onSelectGenre(genre)}
-              className={genre.id === activeGenre?.id ? activeStyle : style}
+              className={genre.id === activeGenreId ? activeStyle : style}
             >
               <div className='group flex flex-row gap-4 items-center'>
                 <img

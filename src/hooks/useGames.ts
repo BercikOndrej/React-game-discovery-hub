@@ -14,21 +14,6 @@ const useGames = (gameQuery: GameQuery) =>
           search: gameQuery.searchText,
         },
       }),
-    staleTime: 30 * 60 * 1000, // 30min
   });
-
-// const useGames = (gameQuery: GameQuery) =>
-//   useData<Game>(
-//     ENPOINT,
-//     {
-//       params: {
-//         genres: gameQuery.genre?.id,
-//         platforms: gameQuery.platform?.id,
-//         ordering: gameQuery.ordering,
-//         search: gameQuery.searchText,
-//       },
-//     },
-//     [gameQuery]
-//   );
 
 export default useGames;

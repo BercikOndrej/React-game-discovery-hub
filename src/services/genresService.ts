@@ -1,4 +1,4 @@
-import APIClient from './apiClient';
+import APIClient from './APIClient';
 
 export interface Genre {
   id: number;

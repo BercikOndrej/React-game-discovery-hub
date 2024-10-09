@@ -8,11 +8,7 @@ const usePlatforms = () =>
     queryFn: platformsService.getAll,
     placeholderData: (prev) => prev,
     staleTime: 24 * 60 * 60 * 1000, // 24 hours
-    initialData: {
-      count: platforms.length,
-      results: platforms,
-      next: null,
-    },
+    initialData: platforms,
   });
 
 export default usePlatforms;

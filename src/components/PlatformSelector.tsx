@@ -1,4 +1,3 @@
-import { Platform } from '@/services/platformsService';
 import {
   Select,
   SelectContent,
@@ -12,7 +11,7 @@ import { Spinner } from '@/components/ui/spinner';
 import usePlatforms from '@/hooks/usePlatforms';
 
 interface Props {
-  onSelectPlatform: (platformSlug: Platform) => void;
+  onSelectPlatform: (platformId: number) => void;
 }
 
 const PlatformSelector = ({ onSelectPlatform }: Props) => {
@@ -22,11 +21,9 @@ const PlatformSelector = ({ onSelectPlatform }: Props) => {
 
   return (
     <Select
-      onValueChange={(platformSlug) =>
-        onSelectPlatform(
-          data?.results.find((platform) => platform.slug === platformSlug)!!
-        )
-      }
+      onValueChange={(id) => {
+        onSelectPlatform(Number(id));
+      }}
     >
       <SelectTrigger className='w-40'>
         <SelectValue placeholder='Select a platform' />
@@ -36,7 +33,7 @@ const PlatformSelector = ({ onSelectPlatform }: Props) => {
           <SelectLabel>Platforms</SelectLabel>
           {isLoading && <Spinner />}
           {data?.results.map((platform) => (
-            <SelectItem key={platform.id} value={platform.slug}>
+            <SelectItem key={platform.id} value={platform.id.toString()}>
               {platform.name}
             </SelectItem>
           ))}

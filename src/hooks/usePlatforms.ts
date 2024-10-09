@@ -11,6 +11,7 @@ const usePlatforms = () =>
     initialData: {
       count: platforms.length,
       results: platforms,
+      next: null,
     },
   });
 

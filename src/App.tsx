@@ -43,8 +43,8 @@ function App() {
           <GameHeading gameQuery={gameQuery} />
           <div className='flex flex-row gap-4'>
             <PlatformSelector
-              onSelectPlatform={(platform) =>
-                setGameQuery({ ...gameQuery, platformId: platform.id })
+              onSelectPlatform={(platformId) =>
+                setGameQuery({ ...gameQuery, platformId: platformId })
               }
             />
             <SortSelector

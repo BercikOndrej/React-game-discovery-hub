@@ -12,6 +12,7 @@
 - Sorting games by sever elements
 - Dark and Light mode
 - Simple animations
+- Infinite scrolling
 
 ## Server
 
@@ -30,11 +31,14 @@
 - `react-icons` for many icons
 - `axios` axios for easy http comunication
 - `dotenv` for managing enviroment variables
+- `@tanstack/react-query` for fetching data
+- `react-infinity-scroll-component` for infinite scrolling
 
 ## Practised Terms
 
 - Connection to the backend
 - Fetching data from server and canceling a fetch request
+- Working with `React-query` library for fetching data
 - Creating React Components
 - Learning `Tailwind CSS` and `Shadcn UI` in detail
 - Rendering data dynamically
@@ -44,7 +48,7 @@
 - Inspecting result by `Chrome React Developer Tools`
 - Correct display of icons and images
 - Implementation responzive design
-- Separation of Concerns
+- `Separation of Concerns`
 - Showing loading elements like skeletons and loading spinner
 - Creating a generic classes and custom fetching hook for server data managing
 - Store and show some data as a static data

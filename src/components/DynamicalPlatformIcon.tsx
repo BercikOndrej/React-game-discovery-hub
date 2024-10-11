@@ -5,10 +5,10 @@ import {
   FaWindows,
   FaLinux,
   FaAndroid,
-} from "react-icons/fa";
-import { MdPhoneIphone } from "react-icons/md";
-import { SiNintendoswitch } from "react-icons/si";
-import { BsGlobe } from "react-icons/bs";
+} from 'react-icons/fa';
+import { MdPhoneIphone } from 'react-icons/md';
+import { SiNintendoswitch } from 'react-icons/si';
+import { BsGlobe } from 'react-icons/bs';
 
 interface Props {
   platformSlug: string;
@@ -16,31 +16,31 @@ interface Props {
 
 const DynamicalIcon = ({ platformSlug }: Props) => {
   switch (platformSlug) {
-    case "linux": {
+    case 'linux': {
       return <FaLinux />;
     }
-    case "mac": {
+    case 'mac': {
       return <FaApple />;
     }
-    case "xbox": {
+    case 'xbox': {
       return <FaXbox />;
     }
-    case "playstation": {
+    case 'playstation': {
       return <FaPlaystation />;
     }
-    case "pc": {
+    case 'pc': {
       return <FaWindows />;
     }
-    case "android": {
+    case 'android': {
       return <FaAndroid />;
     }
-    case "ios": {
+    case 'ios': {
       return <MdPhoneIphone />;
     }
-    case "nintendo": {
+    case 'nintendo': {
       return <SiNintendoswitch />;
     }
-    case "web": {
+    case 'web': {
       return <BsGlobe />;
     }
   }

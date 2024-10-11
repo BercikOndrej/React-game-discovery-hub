@@ -1,19 +1,13 @@
-import useGames from '@/hooks/useGames';
 import GameCard from '@/components/GameCard';
 import GameCardSkeleton from '@/components/GameCardSkeleton';
-import { GameQuery } from '@/App';
 import ErrorAlert from './ErrorAlert';
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Spinner } from './ui/spinner';
+import useGames from '@/hooks/useGames';
 
-interface Props {
-  gameQuery: GameQuery;
-}
-
-const GameGrid = ({ gameQuery }: Props) => {
-  const { data, error, isLoading, fetchNextPage, hasNextPage } =
-    useGames(gameQuery);
+const GameGrid = () => {
+  const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames();
 
   const keys = Array.from({ length: 16 }, (_, num) => num + 1);
   const fetchedGamesCount =

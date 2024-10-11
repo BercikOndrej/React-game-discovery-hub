@@ -33,6 +33,8 @@
 - `dotenv` for managing enviroment variables
 - `@tanstack/react-query` for fetching data
 - `react-infinity-scroll-component` for infinite scrolling
+- `zustand` library for Client State Managment
+- `simple-zustand-devtool` for debugging data states in app
 
 ## Practised Terms
 
@@ -45,6 +47,7 @@
 - Handling events for user responses
 - Detailed familiarization with `useState`, `useEffect` and `useRef hooks`
 - Sharing state between components
+- Using State Managing Devtool `Zustand` (`gameQuery` object)
 - Inspecting result by `Chrome React Developer Tools`
 - Correct display of icons and images
 - Implementation responzive design

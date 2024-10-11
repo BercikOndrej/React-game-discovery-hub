@@ -1,15 +1,13 @@
 import { Spinner } from '@/components/ui/spinner';
 import getCroppedImage from '@/services/imageUrl';
 import ErrorAlert from './ErrorAlert';
-import { Genre } from '@/services/genresService';
 import useGenres from '@/hooks/useGenres';
+import useGameQueryStore from '@/gameQueryStore';
 
-interface Props {
-  activeGenreId?: number;
-  onSelectGenre: (genre: Genre) => void;
-}
-const GenresList = ({ activeGenreId, onSelectGenre: onSelectGenre }: Props) => {
+const GenresList = () => {
   const { data, error, isLoading } = useGenres();
+  const genreId = useGameQueryStore((store) => store.gameQuery.genreId);
+  const setGenreId = useGameQueryStore((store) => store.setGenreId);
 
   const style =
     'duration-500 transform ease-linear group hover:cursor-pointer p-2 rounded-lg hover:font-bold hover:bg-gray-700 hover:text-gray-50 hover:dark:bg-gray-50 hover:dark:text-gray-700 ';
@@ -28,8 +26,8 @@ const GenresList = ({ activeGenreId, onSelectGenre: onSelectGenre }: Props) => {
           {data?.results.map((genre) => (
             <li
               key={genre.id}
-              onClick={() => onSelectGenre(genre)}
-              className={genre.id === activeGenreId ? activeStyle : style}
+              onClick={() => setGenreId(genre.id)}
+              className={genre.id === genreId ? activeStyle : style}
             >
               <div className='group flex flex-row gap-4 items-center'>
                 <img

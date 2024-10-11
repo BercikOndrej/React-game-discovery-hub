@@ -1,14 +1,14 @@
-import { GameQuery } from '@/App';
+import useGameQueryStore from '@/gameQueryStore';
 import useGenre from '@/hooks/useGenre';
 import usePlatform from '@/hooks/usePlatform';
 
-interface Props {
-  gameQuery: GameQuery;
-}
+const GameHeading = () => {
+  const genreId = useGameQueryStore((store) => store.gameQuery.genreId);
+  const correctGenre = useGenre(genreId);
 
-const GameHeading = ({ gameQuery }: Props) => {
-  const correctGenre = useGenre(gameQuery.genreId);
-  const correctPlatform = usePlatform(gameQuery.platformId);
+  const platformId = useGameQueryStore((store) => store.gameQuery.platformId);
+  const correctPlatform = usePlatform(platformId);
+
   const heading = `${correctPlatform?.name ?? ''} ${
     correctGenre?.name ?? ''
   } Games`.trim();

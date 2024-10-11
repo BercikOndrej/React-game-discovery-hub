@@ -8,21 +8,19 @@ import {
   SelectValue,
 } from './ui/select';
 import { Spinner } from '@/components/ui/spinner';
+import useGameQueryStore from '@/gameQueryStore';
 import usePlatforms from '@/hooks/usePlatforms';
 
-interface Props {
-  onSelectPlatform: (platformId: number) => void;
-}
-
-const PlatformSelector = ({ onSelectPlatform }: Props) => {
+const PlatformSelector = () => {
   const { data, error, isLoading } = usePlatforms();
+  const setPlatformId = useGameQueryStore((store) => store.setPlatformId);
 
   if (error) return null;
 
   return (
     <Select
       onValueChange={(id) => {
-        onSelectPlatform(Number(id));
+        setPlatformId(Number(id));
       }}
     >
       <SelectTrigger className='w-40'>

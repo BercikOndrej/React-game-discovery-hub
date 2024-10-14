@@ -1,5 +1,5 @@
 import DynamicalIcon from '@/components/DynamicalPlatformIcon';
-import { Platform } from '@/services/platformsService';
+import { Platform } from '@/entities/Platform';
 
 interface Props {
   platforms: Platform[];

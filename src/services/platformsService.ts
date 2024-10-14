@@ -1,10 +1,5 @@
+import { Platform } from '@/entities/Platform';
 import APIClient from './APIClient';
-
-export interface Platform {
-  id: number;
-  name: string;
-  slug: string;
-}
 
 const PLATFORMS_ENDPOINT = '/platforms/lists/parents';
 

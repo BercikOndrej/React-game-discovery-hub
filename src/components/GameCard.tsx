@@ -3,7 +3,7 @@ import getCroppedImage from '@/services/imageUrl';
 import PlatformsIconList from '@/components/PlatformsList';
 import CriticScoreBadge from '@/components/CriticScoreBadge';
 import RatingEmoji from './RatingEmoji';
-import { Game } from '@/services/gamesService';
+import { Game } from '@/entities/Game';
 import { Link } from 'react-router-dom';
 
 interface Props {

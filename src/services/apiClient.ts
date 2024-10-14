@@ -1,10 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-
-export interface ApiResponse<T> {
-  count: number;
-  next: string | null;
-  results: T[];
-}
+import { ApiResponse } from '@/entities/ApiResponse';
 
 const axiosInstant = axios.create({
   baseURL: 'https://api.rawg.io/api',

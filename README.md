@@ -35,6 +35,7 @@
 - `react-infinity-scroll-component` for infinite scrolling
 - `zustand` library for Client State Managment
 - `simple-zustand-devtool` for debugging data states in app
+- `react-router-dom@6.10.0` foo navigation throught the project
 
 ## Practised Terms
 

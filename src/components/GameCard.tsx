@@ -4,6 +4,7 @@ import PlatformsIconList from '@/components/PlatformsList';
 import CriticScoreBadge from '@/components/CriticScoreBadge';
 import RatingEmoji from './RatingEmoji';
 import { Game } from '@/services/gamesService';
+import { Link } from 'react-router-dom';
 
 interface Props {
   game: Game;
@@ -11,6 +12,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   const theme = localStorage.getItem('vite-ui-theme') ?? 'light';
+  const gameLink = `/games/${game.slug}`;
 
   return (
     <Card className='group mx-auto rounded-t-xl'>
@@ -33,7 +35,7 @@ const GameCard = ({ game }: Props) => {
           )}
         </div>
         <CardTitle className='text-2xl group-hover:text-gray-50 group-hover:dark:text-gray-900'>
-          {game.name}
+          <Link to={gameLink}>{game.name}</Link>
         </CardTitle>
       </CardHeader>
       <CardFooter className='mt-2'>

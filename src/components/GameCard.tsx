@@ -34,7 +34,7 @@ const GameCard = ({ game }: Props) => {
             <CriticScoreBadge score={game.metacritic} />
           )}
         </div>
-        <CardTitle className='text-2xl group-hover:text-gray-50 group-hover:dark:text-gray-900'>
+        <CardTitle className='text-2xl group-hover:text-white group-hover:dark:text-gray-900'>
           <Link to={gameLink}>{game.name}</Link>
         </CardTitle>
       </CardHeader>

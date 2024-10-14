@@ -5,7 +5,8 @@ interface Props {
 }
 const CriticScoreBadge = ({ score }: Props) => {
   const color = score > 75 ? 'green' : score > 50 ? 'yellow' : 'gray';
-  let style = 'group-hover:dark:text-black hover:text-green dark:opacity-70 ';
+  let style =
+    'group-hover:dark:text-black hover:text-green w-10 dark:opacity-70 ';
 
   switch (color) {
     case 'green': {

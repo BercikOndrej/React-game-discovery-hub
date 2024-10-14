@@ -7,7 +7,7 @@ import SortSelector from '@/components/SortSelector';
 const HomePage = () => {
   return (
     <div className='flex flex-row'>
-      <aside className='hidden w-[200px] lg:inline'>
+      <aside className='hidden w-[250px] lg:inline'>
         <GenresList />
       </aside>
 

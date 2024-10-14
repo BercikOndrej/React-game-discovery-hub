@@ -4,6 +4,7 @@ interface Props {
   score: number;
 }
 const CriticScoreBadge = ({ score }: Props) => {
+  if (!score) return null;
   const color = score > 75 ? 'green' : score > 50 ? 'yellow' : 'gray';
   let style =
     'group-hover:dark:text-black hover:text-green w-10 dark:opacity-70 ';

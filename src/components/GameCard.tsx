@@ -30,9 +30,7 @@ const GameCard = ({ game }: Props) => {
                 : []
             }
           />
-          {game.metacritic !== null && (
-            <CriticScoreBadge score={game.metacritic} />
-          )}
+          <CriticScoreBadge score={game.metacritic} />
         </div>
         <CardTitle className='text-2xl group-hover:text-white group-hover:dark:text-gray-900'>
           <Link to={gameLink}>{game.name}</Link>

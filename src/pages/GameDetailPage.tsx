@@ -1,10 +1,9 @@
-import CriticScoreBadge from '@/components/CriticScoreBadge';
 import ExpandableText from '@/components/ExpandableText';
-import DefinitionItem from '@/components/DefinitionItem';
 import { Spinner } from '@/components/ui/spinner';
 import useGame from '@/hooks/useGame';
 import { useParams } from 'react-router-dom';
 import GameAttributes from '@/components/GameAttributes';
+import GameTrailer from '@/components/GameTrailer';
 
 const GameDetailPage = () => {
   const { slug } = useParams();
@@ -20,6 +19,7 @@ const GameDetailPage = () => {
       <ExpandableText maxChars={300}>{game.description_raw}</ExpandableText>
 
       <GameAttributes game={game} />
+      <GameTrailer gameId={game.id} />
     </div>
   );
 };

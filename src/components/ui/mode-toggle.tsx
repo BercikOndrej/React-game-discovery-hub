@@ -16,7 +16,7 @@ export function ModeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          className='dark:bg-gray-700 dark:hover:bg-gray-600 w-12 h-10'
+          className='dark:bg-gray-700 dark:hover:bg-gray-50 w-12 h-10'
           variant='outline'
           size='icon'
         >

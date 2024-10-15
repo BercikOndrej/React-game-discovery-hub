@@ -13,6 +13,7 @@
 - Dark and Light mode
 - Simple animations
 - Infinite scrolling
+- View details of the game like screenshots, description, trailer and game attributes
 
 ## Server
 
@@ -51,8 +52,9 @@
 - Using State Managing Devtool `Zustand` (`gameQuery` object)
 - Inspecting result by `Chrome React Developer Tools`
 - Correct display of icons and images
-- Implementation responzive design
+- Implementation responive design
 - `Separation of Concerns`
+- Use navigation between pages in a project via `React Router` library
 - Showing loading elements like skeletons and loading spinner
 - Creating a generic classes and custom fetching hook for server data managing
 - Store and show some data as a static data

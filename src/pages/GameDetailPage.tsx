@@ -11,21 +11,6 @@ const GameDetailPage = () => {
   const { slug } = useParams();
   const { data: game, isLoading, error } = useGame(slug!);
 
-  // Setting background image
-  let backgroundImageStyle: string;
-  if (game && game.background_image !== undefined) {
-    backgroundImageStyle = "bg-[url('" + game.background_image + "')]";
-    console.log(game, backgroundImageStyle);
-  }
-
-  useEffect(() => {
-    const body = document.body;
-    if (body && backgroundImageStyle) {
-      body.classList.add(backgroundImageStyle);
-      body.classList.add('bg-cover');
-    }
-  }, [game?.background_image]);
-
   if (isLoading) return <Spinner size='large' className='m-4' />;
 
   if (error || !game) throw new Error('Error during loading a game details.');

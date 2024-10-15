@@ -4,7 +4,6 @@ import useGame from '@/hooks/useGame';
 import { useParams } from 'react-router-dom';
 import GameAttributes from '@/components/GameAttributes';
 import GameTrailer from '@/components/GameTrailer';
-import { useEffect } from 'react';
 import ScreenshotsGrid from '@/components/ScreenshotsGrid';
 
 const GameDetailPage = () => {

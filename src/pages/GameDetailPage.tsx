@@ -26,7 +26,7 @@ const GameDetailPage = () => {
     }
   }, [game?.background_image]);
 
-  if (isLoading) return <Spinner size='large' />;
+  if (isLoading) return <Spinner size='large' className='m-4' />;
 
   if (error || !game) throw new Error('Error during loading a game details.');
 

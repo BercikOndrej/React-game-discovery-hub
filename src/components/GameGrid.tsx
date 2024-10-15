@@ -5,7 +5,6 @@ import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Spinner } from './ui/spinner';
 import useGames from '@/hooks/useGames';
-import Game from '@/entities/Game';
 
 const GameGrid = () => {
   const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames();
@@ -29,7 +28,7 @@ const GameGrid = () => {
           keys.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
         {data?.pages.map((page, index) => (
           <React.Fragment key={index}>
-            {page.results.map((game: Game) => (
+            {page.results.map((game: any) => (
               <GameCard key={game.id} game={game} />
             ))}
           </React.Fragment>

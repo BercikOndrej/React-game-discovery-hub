@@ -2,15 +2,20 @@ import { Input } from '@/components/ui/input';
 import useGameQueryStore from '@/gameQueryStore';
 import { useRef } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const SearchInput = () => {
+  const navigate = useNavigate();
   const setSearchText = useGameQueryStore((store) => store.setSearchText);
   const searchRef = useRef<HTMLInputElement>(null);
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (searchRef.current !== null) setSearchText(searchRef.current.value);
+        if (searchRef.current !== null) {
+          setSearchText(searchRef.current.value);
+          navigate('/');
+        }
       }}
       className='flex items-center w-full group focus:text-white'
     >

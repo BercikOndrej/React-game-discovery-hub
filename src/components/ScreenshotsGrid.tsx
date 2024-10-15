@@ -22,7 +22,7 @@ const ScreenshotsGrid = ({ gameId }: Props) => {
         ))}
       {data?.results.map((screenshot) => (
         <img
-          className='rounded-md'
+          className='rounded-md w-full h-full'
           key={screenshot.id}
           src={screenshot.image}
         />

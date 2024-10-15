@@ -1,4 +1,4 @@
-import { GameScreenshot } from '@/entities/GameScreenshot';
+import GameScreenshot from '@/entities/GameScreenshot';
 import APIClient from '@/services/APIClient';
 import { useQuery } from '@tanstack/react-query';
 

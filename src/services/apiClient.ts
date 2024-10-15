@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { ApiResponse } from '@/entities/ApiResponse';
+import ApiResponse from '@/entities/ApiResponse';
 
 const axiosInstant = axios.create({
   baseURL: 'https://api.rawg.io/api',

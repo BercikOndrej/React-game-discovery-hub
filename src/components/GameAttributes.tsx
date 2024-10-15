@@ -1,4 +1,4 @@
-import { Game } from '@/entities/Game';
+import Game from '@/entities/Game';
 import DefinitionItem from '@/components/DefinitionItem';
 import CriticScoreBadge from '@/components/CriticScoreBadge';
 

@@ -66,6 +66,32 @@
 - `npm run build` for building an app
 - `vercel` for app deployment
 
+## Projekt Structure - src Folder
+
+- **src**
+  - **assets**
+    - Static files like images, logos and placeholders
+  - **ccomponents**
+    - All React components used by application
+  - **data**
+    - Static data downloaded drom server
+  - **entities**
+    - Files which describe all server data representing objects
+  - **hooks**
+    - Definition of all `custom hooks`
+  - **pages**
+    - Files representing single pages of application
+  - **services**
+    - Files helping with diferent logic in app
+  - **App.tsx**
+    - Component representing whole application
+  - **gameQueryStore**
+    - File helping with centralization of Global State managment of object `ReactQuery`
+  - **main.tsx**
+    - Entry point of whole application
+  - **routes.tsx**
+    - Definition of `Routes` for navigation through application
+
 ## App Deployment
 
 - I made app deployment by `Vercel` and `GitHub` -> [GitHub repository](https://github.com/BercikOndrej/React-game-hub)

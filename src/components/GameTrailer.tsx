@@ -6,7 +6,6 @@ interface Props {
 }
 const GameTrailer = ({ gameId }: Props) => {
   const { data, isLoading, error } = useGameTrailer(gameId);
-  console.log(data);
 
   if (isLoading) return <Spinner />;
   if (error) throw new Error();
@@ -14,6 +13,7 @@ const GameTrailer = ({ gameId }: Props) => {
   const firstTrailer = data?.results[0];
   return firstTrailer ? (
     <video
+      className='rounded-md'
       src={firstTrailer.data[480]}
       poster={firstTrailer.preview}
       controls

@@ -4,10 +4,27 @@ import useGame from '@/hooks/useGame';
 import { useParams } from 'react-router-dom';
 import GameAttributes from '@/components/GameAttributes';
 import GameTrailer from '@/components/GameTrailer';
+import { useEffect } from 'react';
+import ScreenshotsGrid from '@/components/ScreenshotsGrid';
 
 const GameDetailPage = () => {
   const { slug } = useParams();
   const { data: game, isLoading, error } = useGame(slug!);
+
+  // Setting background image
+  let backgroundImageStyle: string;
+  if (game && game.background_image !== undefined) {
+    backgroundImageStyle = "bg-[url('" + game.background_image + "')]";
+    console.log(game, backgroundImageStyle);
+  }
+
+  useEffect(() => {
+    const body = document.body;
+    if (body && backgroundImageStyle) {
+      body.classList.add(backgroundImageStyle);
+      body.classList.add('bg-cover');
+    }
+  }, [game?.background_image]);
 
   if (isLoading) return <Spinner size='large' />;
 
@@ -20,6 +37,7 @@ const GameDetailPage = () => {
 
       <GameAttributes game={game} />
       <GameTrailer gameId={game.id} />
+      <ScreenshotsGrid gameId={game.id} />
     </div>
   );
 };

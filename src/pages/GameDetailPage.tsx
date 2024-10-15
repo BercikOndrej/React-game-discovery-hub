@@ -31,13 +31,16 @@ const GameDetailPage = () => {
   if (error || !game) throw new Error('Error during loading a game details.');
 
   return (
-    <div className='flex flex-col gap-4 w-full p-4'>
-      <h2 className='text-4xl font-bold'>{game.name}</h2>
-      <ExpandableText maxChars={300}>{game.description_raw}</ExpandableText>
-
-      <GameAttributes game={game} />
-      <GameTrailer gameId={game.id} />
-      <ScreenshotsGrid gameId={game.id} />
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-full p-4'>
+      <div>
+        <h2 className='text-4xl font-bold'>{game.name}</h2>
+        <ExpandableText maxChars={400}>{game.description_raw}</ExpandableText>
+        <GameAttributes game={game} />
+      </div>
+      <div>
+        <GameTrailer gameId={game.id} />
+        <ScreenshotsGrid gameId={game.id} />
+      </div>
     </div>
   );
 };

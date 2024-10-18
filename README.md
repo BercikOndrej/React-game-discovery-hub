@@ -71,7 +71,7 @@
 - **src**
   - **assets**
     - Static files like images, logos and placeholders
-  - **ccomponents**
+  - **components**
     - All React components used by application
   - **data**
     - Static data downloaded drom server

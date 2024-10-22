@@ -16,11 +16,14 @@ const GameCard = ({ game }: Props) => {
 
   return (
     <Card className='group mx-auto rounded-t-xl'>
-      <img
-        className='rounded-t-lg'
-        src={getCroppedImage(game.background_image, theme)}
-        alt='Game image'
-      />
+      <div className='overflow-hidden rounded-t-lg'>
+        <img
+          className='rounded-t-lg group-hover:scale-110 duration-500 transition-transform'
+          src={getCroppedImage(game.background_image, theme)}
+          alt='Game image'
+        />
+      </div>
+
       <CardHeader className='pb-0'>
         <div className='flex flex-row justify-between'>
           <PlatformsIconList

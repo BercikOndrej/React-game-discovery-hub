@@ -21,11 +21,13 @@ const ScreenshotsGrid = ({ gameId }: Props) => {
           <Skeleton key={skeleton} className='w-full h-[400px]' />
         ))}
       {data?.results.map((screenshot) => (
-        <img
-          className='rounded-md w-full h-full'
-          key={screenshot.id}
-          src={screenshot.image}
-        />
+        <div className=' overflow-hidden rounded-md'>
+          <img
+            className='w-full h-full hover:scale-110 transition-transform duration-500'
+            key={screenshot.id}
+            src={screenshot.image}
+          />
+        </div>
       ))}
     </div>
   );
